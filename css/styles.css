@@ -581,6 +581,7 @@ header {
   width: 100%;
   background-color: var(--dairy);
   border-radius: 4px;
+  padding: 72px 24px 24px;
 }
 
 .modal-close-button {
@@ -621,6 +622,182 @@ header {
 .modal-close-button:hover > .modal-close-button-cross,
 .modal-close-button:focus > .modal-close-button-cross {
   fill: var(--white-common);
+}
+
+.leave-contacts-form-title {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.leave-contacts-form-text-input-label {
+  display: block;
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.leave-contacts-form-input {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(var(--navy-blue-rgb), 0.4);
+  border-radius: 4px;
+  padding-left: 38px;
+  box-sizing: border-box;
+  color: var(--navy-blue);
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.04em;
+
+  transition-property: border-top-color, border-right-color, border-bottom-color, border-left-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-contacts-form-input:focus {
+  border-color: var(--iris);
+}
+
+.leave-contacts-form-input-wrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.leave-contacts-form-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 18px;
+  fill: var(--navy-blue);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-contacts-form-input:focus + .leave-contacts-form-input-icon {
+  fill: var(--iris);
+}
+
+.leave-contacts-form-textarea {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 120px;
+  resize: none;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: 1px solid rgba(var(--navy-blue-rgb), 0.4);
+  border-radius: 4px;
+  color: var(--navy-blue);
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.04em;
+
+  transition-property: border-top-color, border-right-color, border-bottom-color, border-left-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-contacts-form-textarea:focus {
+  border-color: var(--iris);
+}
+
+.leave-contacts-form-textarea::placeholder {
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.04em;
+}
+
+.leave-contacts-form-checkbox-input-wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.leave-contacts-form-checkbox-wrapper {
+  position: relative;
+  margin-right: 8px;
+}
+
+.leave-contacts-form-checkbox {
+  all: unset;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(var(--navy-blue-rgb), 0.4);
+  border-radius: 4px;
+
+  transition-property: background-color, border-top-color, border-right-color, border-bottom-color, border-left-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-contacts-form-checkbox:checked {
+  border-color: var(--ocean);
+  background-color: var(--ocean);
+}
+
+.leave-contacts-form-checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  fill: transparent;
+  pointer-events: none;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-contacts-form-checkbox:checked + .leave-contacts-form-checkbox-icon {
+  fill: var(--white-common);
+}
+
+.leave-contacts-form-checkbox-label {
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.leave-contacts-form-link {
+  line-height: 1.25;
+  color: var(--iris);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.leave-contacts-form-submit-button {
+  all: unset;
+  width: 159px;
+  height: 56px;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--iris);
+  color: var(--white-text);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leave-contacts-form-submit-button:hover,
+.leave-contacts-form-submit-button:focus {
+  background-color: var(--ocean);
 }
 
 /*endregion*/
@@ -687,4 +864,68 @@ footer > .container {
   width: 24px;
   height: 24px;
   fill: var(--cloud);
+}
+
+.subscribe-form-container {
+  margin-left: 80px;
+  width: 100%;
+}
+
+.subscribe-form-container > form {
+  display: flex;
+}
+
+.subscribe-form-name {
+  color: var(--white-text);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.subscribe-form-email-input {
+  all: unset;
+  width: 264px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid var(--white-common);
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-right: 24px;
+  font-size: 12px;
+  line-height: 2;
+  color: var(--white-text);
+  letter-spacing: 0.04em;
+}
+
+.subscribe-form-email-input::placeholder {
+  color: var(--white-text);
+  letter-spacing: 0.04em;
+}
+
+.subscription-submit-button {
+  all: unset;
+  flex-grow: 1;
+  width: auto;
+  height: 40px;
+  background-color: var(--iris);
+  color: var(--white-text);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscription-submit-button:hover,
+.subscription-submit-button:focus {
+  background-color: var(--ocean);
+}
+
+.subscription-submit-button-icon {
+  fill: var(--white-common);
 }
